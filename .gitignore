@@ -1,40 +1,10 @@
-# Ambiente virtual
-venv/
-.env/
-
-# Arquivos de configuração de IDE
-.vscode/
-.idea/
-
-# Arquivos e diretórios gerados pelo sistema
-*.pyc
-__pycache__/
-
-# Arquivos de log
-*.log
-
-# Arquivos de cache
-*.cache
-
-# Arquivos de banco de dados
-*.sqlite3
-
-# Arquivo de credenciais do Google
+# Ignorar arquivos de credenciais
 credentials.json
+.env
+*.env
+
+# Ignorar diretórios específicos
+secret/
+
+config.json
 service_account.json
-
-# Diretório de uploads
-uploads/
-
-# Diretórios de build e distribuição
-build/
-dist/
-*.egg-info
-
-# Arquivos temporários
-*.tmp
-*.swp
-
-# Arquivos do sistema operacional
-.DS_Store
-Thumbs.db
