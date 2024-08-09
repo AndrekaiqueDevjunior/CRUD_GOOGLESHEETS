@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Exclusão</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    {% include 'header.html' %}
+    <main>
+        <h1>Confirmar Exclusão</h1>
+        <p>Você tem certeza de que deseja excluir este funcionário? Esta ação não pode ser desfeita.</p>
+        <form action="{{ url_for('main.delete', id=employee_id) }}/confirm" method="post">
+            <input type="submit" value="Excluir" class="button">
+            <a href="{{ url_for('main.index') }}" class="button">Cancelar</a>
+        </form>
+    </main>
+    {% include 'footer.html' %}
+</body>
+</html>

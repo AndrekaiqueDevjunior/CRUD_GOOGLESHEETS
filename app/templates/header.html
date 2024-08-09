@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Minha Aplicação{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+                <div class="topnav">
+                    <a class="active" href="/">Inicio</a>
+                    <a href="{{ url_for('main.add') }}">Adicionar Funcionário</a>
+                    <div class="search-container">
+                        <form method="GET" action="{{ url_for('main.search') }}">
+                            <input type="text" name="search" placeholder="Pesquisar" value="{{ request.args.get('search', '') }}" required />
+                            <button type="submit">Pesquisar</button>
+                        </form>
+                    </div>
+                </div>
+          
+        </nav>
+    </header>
+    <main>

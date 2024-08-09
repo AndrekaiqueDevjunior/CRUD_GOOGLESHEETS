@@ -1,0 +1,10 @@
+# Ignorar arquivos de credenciais
+credentials.json
+.env
+*.env
+
+# Ignorar diretórios específicos
+secret/
+
+config.json
+service_account.json
